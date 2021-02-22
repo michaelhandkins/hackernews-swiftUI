@@ -9,13 +9,19 @@ import SwiftUI
 
 struct ContentView: View {
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        NavigationView {
+            List {
+                Text("Hello, world!")
+                Text("Goodbye, World!")
+            }
+            .navigationBarTitle("H4X0R News")
+        }
+        
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView().previewDevice("iPhone 11 Pro")
     }
 }
